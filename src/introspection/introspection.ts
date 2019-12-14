@@ -9,7 +9,8 @@ import {
 import { SimplifiedIntrospection, SimplifiedIntrospectionWithIds, SimplifiedType } from './types';
 import { typeNameToId } from './utils';
 
-function unwrapType(type, wrappers) {
+function unwrapType ( type, wrappers ) {
+  console.log( type, wrappers )
   while (type.kind === 'NON_NULL' || type.kind == 'LIST') {
     wrappers.push(type.kind);
     type = type.ofType;
@@ -58,6 +59,7 @@ function convertType(inType: IntrospectionType): SimplifiedType {
     name: inType.name,
     description: inType.description,
   };
+  console.log(inType)
 
   switch (inType.kind) {
     case 'OBJECT':

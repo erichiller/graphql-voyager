@@ -41,6 +41,7 @@ export function isScalarType(type) {
 }
 
 export function isObjectType(type) {
+  console.log("isObjetType?", type);
   return type.kind === 'OBJECT';
 }
 

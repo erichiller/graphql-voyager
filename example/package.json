@@ -1,7 +1,7 @@
 {
   "description": "An example using GraphQL-Voyager",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.ts"
   },
   "dependencies": {
     "express": "4.16.3",

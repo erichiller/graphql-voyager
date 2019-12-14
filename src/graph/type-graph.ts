@@ -31,6 +31,7 @@ export function getTypeGraph(schema, rootType: string, hideRoot: boolean) {
     var typeIds = [rootId];
     var nodes = [];
     var types = _.keyBy(schema.types, 'id');
+    console.log("buildGraph")
 
     for (var i = 0; i < typeIds.length; ++i) {
       var id = typeIds[i];
